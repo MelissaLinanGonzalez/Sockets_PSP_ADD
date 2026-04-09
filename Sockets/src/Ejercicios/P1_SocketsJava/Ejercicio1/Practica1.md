@@ -17,3 +17,29 @@ El flujo es el siguiente:
 
 ### <u>Operaciones disponibles</u>
 - Sumar: El servidor pedirá dos números y devolverá el resultado.
+- Contador: El servidor pedirá un texto y devolverá cuántas vocales tiene.
+- Invertir: El servidor pedirá un texto y devolverá la cadena invertida.
+- EsPrimo: El servidor pedirá un número y responderá si es primo o no.
+- Cerrar: El servidor enviará un mensaje de despedida y cerrará la conexión.
+
+### <u>Ejemplo de ejecución</u>
+SERVIDOR -> Usuario:
+CLIENTE -> admin
+SERVIDOR -> Contraseña:
+CLIENTE -> 1234
+SERVIDOR -> LOGIN_OK
+
+SERVIDOR -> Menú:
+1. Sumar.
+2. Contar vocales.
+3. Invertir cadena.
+4. Primo.
+5. Salir.
+
+CLIENTE -> 1
+
+SERVIDOR -> Introduce el primer número:
+CLIENTE -> 8
+SERVIDOR -> Introduce el segundo número:
+CLIENTE -> 5
+SERVIDOR -> Resultado: 13
