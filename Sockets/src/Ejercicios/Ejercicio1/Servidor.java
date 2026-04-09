@@ -1,5 +1,6 @@
 package Ejercicios.Ejercicio1;
 
+import javax.swing.*;
 import java.io.*;
 import java.net.*;
 
@@ -14,29 +15,68 @@ public class Servidor {
         ) {
             String operacion;
 
-            while ((operacion = in.readLine()) != null) {
+//            while ((operacion = in.readLine()) != null) {
+//
+//                System.out.println("Comando recibido: " + operacion);
+//
+//                if (operacion.equals("EXIT")) {
+//                    out.println("Saliendo del servidor. ¡Adiós!");
+//                    break;
+//                }
+//
+//
+//                String cadena = null;
+//                switch (operacion) {
+//                    case "CIFRAR":
+//                    case "DESCIFRAR":
+//                        out.println("Pasame la cadena");
+//                        cadena = in.readLine();
+//                        out.println(cifrar_descifrar(cadena, operacion, 3));
+//                        break;
+//                    default:
+//                        out.println("Operación no permitida");
+//                }
+//
+//
+//            }
 
-                System.out.println("Comando recibido: " + operacion);
 
-                if (operacion.equals("EXIT")) {
-                    out.println("Saliendo del servidor. ¡Adiós!");
+            while (true){
+                out.println("""
+                        *** Menú de selección ***
+                        \t1. CIFRAR.
+                        \t2. DESCIFRAR.
+                        \t3. EXIT.
+                        ES IMPORTANTE QUE LAS OPCIONES LAS ESCRIBAS TAL CUAL APARECEN.
+                        FIN_MENU
+                        """);
+
+                String opcion = in.readLine();
+
+                if (opcion.equals("EXIT")){
+                    System.out.println("El cliente se ha desconectado");
                     break;
                 }
 
-
-                String cadena = null;
-                switch (operacion) {
+                String cadena = in.readLine();
+                switch (opcion){
                     case "CIFRAR":
+                        System.out.println("El cliente ha seleccionado CIFRAR");
+                        out.println("Has seleccionado CIFRAR ");
+                        out.println("Cadena cifrada: " + cifrar_descifrar(cadena, opcion, 3));
+
+                        break;
                     case "DESCIFRAR":
-                        out.println("Pasame la cadena");
-                        cadena = in.readLine();
-                        out.println(cifrar_descifrar(cadena, operacion, 3));
+                        System.out.println("El cliente ha seleccionado DESCIFRAR");
+                        out.println("Has seleccionado DESCIFRAR");
+                        out.println("Cadena cifrada: " + cifrar_descifrar(cadena, opcion, 3));
                         break;
                     default:
-                        out.println("Operación no permitida");
+                        out.println("Seleccione una opción correcta");
+                        break;
                 }
 
-
+                out.println("FIN_OPERACION");
             }
 
         }catch (ArithmeticException a) {
