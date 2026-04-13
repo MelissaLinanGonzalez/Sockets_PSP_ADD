@@ -94,7 +94,7 @@ public class Servidor {
         if (lista.isEmpty()){
             return 0.0;
         }
-        for (double numero : lista){
+        for (int numero : lista){
             sumaNum += numero;
         }
 
