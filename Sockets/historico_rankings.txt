@@ -1,0 +1,10 @@
+Fecha: Tue Apr 14 12:44:38 CEST 2026
+meli: 2 puntos
+pepe: 0 puntos
+Ganador: meli
+-----------------------------
+Fecha: Tue Apr 14 12:54:18 CEST 2026
+juan: 0 puntos
+meli: 1 puntos
+Ganador: meli
+-----------------------------
