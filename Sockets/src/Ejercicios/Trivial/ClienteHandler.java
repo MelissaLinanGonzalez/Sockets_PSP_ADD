@@ -26,6 +26,11 @@ public class ClienteHandler extends Thread{
             salida = new PrintWriter(cliente.getOutputStream(), true);
             this.nick = entrada.readLine();
             System.out.println("Jugador conectado: " + nick);
+            System.out.println("Aforo actual: " + Servidor.clientes.size());
+
+            if (Servidor.clientes.size() == 2){
+                System.out.println("Aforo máximo! Inicie la partida");
+            }
 
             while (true){
                 String mensaje = entrada.readLine(); // Escucha constante (Bloqueante)

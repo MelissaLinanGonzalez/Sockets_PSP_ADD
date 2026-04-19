@@ -19,6 +19,8 @@ public class ReceptorMensajes extends Thread{
             System.out.println("Servidor finalizado");
         } catch (Exception e){
             System.out.println("Error: " + e.getMessage());
+        } finally {
+            System.exit(0); // esto es para cerrar los clientes que no puedan acceder a la partida por exceso de aforo
         }
     }
 }

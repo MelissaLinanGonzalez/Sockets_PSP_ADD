@@ -36,7 +36,7 @@ public class Servidor {
                         PrintWriter out = new PrintWriter(cliente.getOutputStream(), true);
                         out.println("Sala llena. El servidor ha alcanzado su límete de aforo");
                         cliente.close();
-                        System.out.println("Sala llena, inicie la partida");
+
                     }
                 } catch (Exception e){
 
